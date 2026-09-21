@@ -14,7 +14,8 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b100d'/%3E%3Cg fill='none' stroke='%23b8f665' stroke-width='3'%3E%3Ccircle cx='32' cy='32' r='22'/%3E%3Ccircle cx='32' cy='32' r='14'/%3E%3Cpath d='m32 32 18-18'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='6' fill='%23b8f665'/%3E%3C/svg%3E">
   <link rel="preload" href="assets/manrope-800.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/devices-straight.webp" as="image" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="hero.css?v=5">
   <script src="app.js?v=3" defer></script>
 </head>
 <body>
@@ -42,7 +43,7 @@
     <div class="container header-inner">
       <a href="#top" class="brand" aria-label="FLRAD — наверх"><svg class="brand-icon" aria-hidden="true"><use href="#radar"/></svg><span>FL<span class="lime">RAD</span><small>ЗАКАЗЫ НАХОДЯТ ВАС</small></span></a>
       <nav class="nav" id="navigation" aria-label="Основное меню"><a href="#how">Как это работает</a><a href="#benefits">Преимущества</a><a href="#pricing">Тарифы</a><a href="#faq">FAQ</a></nav>
-      <a class="button button-lime button-small header-cta" href="https://t.me/FreeRad_bot" target="_blank" rel="noopener noreferrer">Попробовать бесплатно <svg class="icon"><use href="#arrow"/></svg></a>
+      <a class="button button-lime button-small header-cta" href="https://t.me/FreeRad_bot" target="_blank" rel="noopener noreferrer"><span class="header-cta-text">Попробовать бесплатно</span><span class="header-cta-short">Начать</span><svg class="icon"><use href="#arrow"/></svg></a>
       <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button>
     </div>
   </header>
@@ -50,7 +51,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-layout">
         <div class="hero-copy">
-          <div class="hero-label"><svg class="icon"><use href="#radar"/></svg> Ваш личный радар заказов</div>
+          <div class="hero-label"><svg class="icon"><use href="#radar"/></svg> Фриланс без вечного поиска</div>
           <h1 id="hero-title">Заказы сами<br><span class="lime">находят вас.</span></h1>
           <p class="hero-lead">Подходящие проекты прямо в Telegram.<br>Вы работаете — Радар ищет.</p>
           <div class="specialties" aria-label="Направления"><span><svg class="icon"><use href="#code"/></svg> Разработка</span><span><svg class="icon"><use href="#pen"/></svg> Дизайн</span><span><svg class="icon"><use href="#chart"/></svg> Маркетинг</span><span><svg class="icon"><use href="#text"/></svg> Тексты</span></div>
@@ -60,21 +61,29 @@
         <div class="hero-art">
           <div class="art-glow" aria-hidden="true"></div>
           <div class="device-scene">
-            <img class="device-hardware" src="assets/devices-straight.webp" alt="Ровный ноутбук и телефон с примером интерфейса FLRAD" width="1536" height="1024" fetchpriority="high">
+            <img class="device-hardware" src="assets/devices-straight.webp" alt="" width="1536" height="1024" fetchpriority="high">
             <div class="laptop-screen" aria-label="Пример экрана радара">
               <div class="screen-brand"><svg class="icon" aria-hidden="true"><use href="#radar"/></svg><span>FL<span class="lime">RAD</span></span><span class="screen-demo-label">ПРИМЕР</span></div>
-              <div class="screen-main"><p class="screen-overline">ВАШ ЛИЧНЫЙ РАДАР</p><h2>Занимайтесь своим.<br><span class="lime">Радар на связи.</span></h2><div class="screen-status"><svg class="icon" aria-hidden="true"><use href="#check"/></svg><span>Радар включён</span></div><div class="screen-profile"><span>Ваше направление</span><div><span>Дизайн</span><span>Figma</span></div></div></div>
-              <div class="screen-footer"><svg class="icon" aria-hidden="true"><use href="#telegram"/></svg><span>Заказы приходят в Telegram</span></div>
+              <div class="dashboard">
+                <div class="dashboard-rail" aria-hidden="true"><span class="rail-active"><svg class="icon"><use href="#radar"/></svg></span><span><svg class="icon"><use href="#chat"/></svg></span><span><svg class="icon"><use href="#user"/></svg></span></div>
+                <div class="dashboard-feed"><div class="feed-heading"><h2>Подходящие заказы</h2><span class="feed-live">Радар активен</span></div><div class="feed-filters"><span class="selected">Для вас</span><span>Дизайн</span><span>Разработка</span></div>
+                  <div class="feed-job featured-job"><span class="job-icon"><svg class="icon"><use href="#pen"/></svg></span><div><h3>Лендинг для бренда</h3><p>Figma · Веб-дизайн</p></div><strong>35 000 ₽<small>Новый</small></strong></div>
+                  <div class="feed-job"><span class="job-icon purple"><svg class="icon"><use href="#code"/></svg></span><div><h3>Telegram-бот</h3><p>Python · Разработка</p></div><strong>60 000 ₽<small>Проект</small></strong></div>
+                  <div class="feed-job"><span class="job-icon blue"><svg class="icon"><use href="#chart"/></svg></span><div><h3>Контент для бренда</h3><p>SMM · Маркетинг</p></div><strong>40 000 ₽<small>Проект</small></strong></div>
+                  <div class="screen-footer"><svg class="icon"><use href="#telegram"/></svg> Ваш следующий проект — в Telegram</div>
+                </div>
+              </div>
             </div>
             <div class="phone-screen" aria-label="Пример уведомления в Telegram">
-              <div class="phone-header"><svg class="icon" aria-hidden="true"><use href="#radar"/></svg><span>FLRAD<small>бот</small></span></div>
-              <div class="phone-message"><span class="phone-kicker">НОВЫЙ ЗАКАЗ</span><h3>Дизайн<br>лендинга</h3><p>от 35 000 ₽</p><span class="phone-tag">Figma</span></div>
+              <div class="phone-header"><svg class="icon" aria-hidden="true"><use href="#radar"/></svg><span>FLRAD<small>бот · Telegram</small></span></div>
+              <div class="phone-day">Сегодня</div>
+              <div class="phone-message"><span class="phone-kicker">ВАМ ПОДХОДИТ</span><h3>Лендинг<br>для бренда</h3><p>от 35 000 ₽</p><div class="phone-description">Нужен дизайнер лендинга. Структура и референсы готовы.</div><span class="phone-tag">Figma</span><span class="phone-time">12:42 ✓✓</span></div>
               <button class="phone-action" type="button" data-open-demo data-demo-category="design" aria-haspopup="dialog" aria-label="Посмотреть пример заказа">Посмотреть</button>
               <span class="phone-example">Пример заказа</span>
             </div>
           </div>
-          <div class="art-caption"><span class="signal-dot" aria-hidden="true"></span> Ваш следующий проект — ближе</div>
-          <span class="illustration-note">Визуализация сервиса</span>
+          <div class="art-caption"><svg class="icon"><use href="#telegram"/></svg> Меньше поиска. Больше проектов.</div>
+          <span class="illustration-note">Пример интерфейса и заказов</span>
           <button class="motion-toggle" type="button" aria-label="Приостановить анимации" aria-pressed="false"><span aria-hidden="true">Ⅱ</span></button>
         </div>
       </div>
